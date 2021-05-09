@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:each="person : ${peopleList}">
+      <p th:text="${person.name}">name</p>
+    </div>
+
+    <form th:action="@{/people}" method="POST">
+      <input name="name" type="text" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
